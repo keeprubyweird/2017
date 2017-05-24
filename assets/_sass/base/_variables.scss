@@ -3,8 +3,9 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: $font-stack-system;
-$heading-font-family: $base-font-family;
+$base-font-family: "Bitter", $font-stack-system;
+$heading-font-family: "LemonBird", $base-font-family;
+$seconday-heading-font-family: "Pathway Gothic One", $base-font-family;
 
 // Line height
 $base-line-height: 1.5;
@@ -12,15 +13,26 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
+$base-spacing: $base-line-height * 1rem;
 $small-spacing: $base-spacing / 2;
+$large-spacing: $base-spacing * 2;
+$x-large-spacing: $base-spacing * 3;
+$xx-large-spacing: $base-spacing * 4;
+$xxx-large-spacing: $base-spacing * 7;
 $base-z-index: 0;
 
 // Colors
 $blue: #1565c0;
-$dark-gray: #333;
+$dark-gray: #474747;
 $medium-gray: #999;
 $light-gray: #ddd;
+$purple: #ea56fd;
+$teal: #60fcdc;
+$mustard: #fdca59;
+$orange: #fd9a59;
+$red: #fd5959;
+$dark-purple: #b657fd;
+$pink: #fa59fd;
 
 // Font Colors
 $base-font-color: $dark-gray;
