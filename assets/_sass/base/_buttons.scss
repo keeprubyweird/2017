@@ -8,7 +8,7 @@
   cursor: pointer;
   display: inline-block;
   font-family: $heading-font-family;
-  font-size: 52px;
+  font-size: 32px;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   padding: $base-spacing $large-spacing $small-spacing;
@@ -19,8 +19,12 @@
   vertical-align: middle;
   white-space: nowrap;
 
+  @media screen and (min-width: 700px) {
+    font-size: 52px;
+  }
+
   &:hover {
-    background-color: shade($action-color, 20%);
+    background-color: $red;
     color: #fff;
   }
 
