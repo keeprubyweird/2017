@@ -1,8 +1,12 @@
 .hero {
   background-color: $teal;
-  padding: $xxx-large-spacing $x-large-spacing $xx-large-spacing $xxx-large-spacing;
+  padding: $x-large-spacing $large-spacing;
   overflow: hidden;
   position: relative;
+
+  @media (min-width: 450px) {
+    padding: $xxx-large-spacing $x-large-spacing $xx-large-spacing $xxx-large-spacing;
+  }
 
   &:before {
     background-color: $purple;
@@ -37,24 +41,43 @@
 
 .logo {
   color: $purple;
-  margin-bottom: $large-spacing;
+
+  @media (min-width: 725px) {
+    margin-bottom: $large-spacing;
+  }
 
   &::before {
-    @include size(112px, 174px);
+    @include size(78px, 107px);
     background-image: url(/assets/images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
     display: block;
     content: "";
-    position: absolute;
-    top: -6rem;
-    left: -9rem;
+
+    @media (max-width: 450px) {
+      float: left;
+      margin-right: $base-spacing;
+      margin-left: -10px;
+    }
+
+    @media (min-width: 450px) {
+      @include size(116px, 174px);
+      position: absolute;
+      top: -6rem;
+      left: -9rem;
+    }
   }
 }
 
 .date {
-  color: $teal;
+  color: #fff;
   position: absolute;
   top: -$x-large-spacing;
   right: 0;
+
+  @media (min-width: 910px) {
+    color: $teal;
+  }
 
   &:after {
     @include size(102px, 35px);
@@ -68,13 +91,23 @@
 }
 
 .address {
-  color: $purple;
-  position: absolute;
-  top: 20rem;
-  left: -18rem;
-  transform: rotate(90deg);
+  color: #fff;
+  margin-bottom: $large-spacing;
+
+  @media (min-width: 725px) {
+    color: $purple;
+    position: absolute;
+    top: 20rem;
+    left: -18rem;
+    transform: rotate(90deg);
+    margin-bottom: 0;
+  }
 
   &:after {
+    @media (max-width: 725px) {
+      display: none;
+    }
+
     @include size(38px, 305px);
     content: "";
     display: block;
@@ -92,22 +125,32 @@
   top: 0;
   right: -4rem;
 
+  @media (max-width: 450px) {
+    display: none;
+  }
+
   li {
-      margin-bottom: $small-spacing;
+    margin-bottom: $small-spacing;
   }
 }
 
 .buybuybuy {
-  float: right;
-  margin-top: -10rem;
-  position: relative;
   z-index: 1;
   margin-right: $x-large-spacing;
+  text-align: center;
+
+  @media (max-width: 500px) {
+  }
+
+  @media (min-width: 910px) {
+    float: right;
+    margin-top: -10rem;
+    position: relative;
+  }
 
   h3 {
     font-family: $seconday-heading-font-family;
     font-size: 24px;
-    text-align: center;
 
     .block {
       display: block;
@@ -134,11 +177,19 @@
 }
 
 .headline {
-  font-size: 6vw;
   line-height: 1;
   color: $dark-gray;
   position: relative;
   z-index: 1;
+  font-size: 42px;
+
+  @media (min-width: 500px) {
+    font-size: 56px;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 6vw;
+  }
 
   span {
     display: inline-block;
@@ -159,21 +210,27 @@
   strong {
     font-weight: normal;
     display: block;
-    padding-top: $xx-large-spacing;
+    padding-top: 8vh;
   }
 }
 
 .tweets {
-  display: flex;
+  @media (min-width: 975px) {
+    display: flex;
+  }
 
   blockquote {
     margin: 0;
   }
 
   li {
-    padding: $base-spacing;
-    width: 33.3333%;
-    font-size: 18px;
+    @include clearfix;
+    padding: $large-spacing;
+    font-size: 1.2em;
+
+    @media (min-width: 975px) {
+      width: 33.3333%;
+    }
 
     &:nth-of-type(1) {
       background-color: $mustard;
@@ -189,20 +246,34 @@
   }
 }
 
+img {
+  float: left;
+}
+
 .commentary {
   font-family: $heading-font-family;
   color: #fff;
   font-size: 48px;
-  line-height: 0.7;
+  line-height: 0.9;
   text-align: center;
   -webkit-font-smoothing: antialiased;
+  transform: rotate(7deg);
+  float: left;
+
+  li:nth-of-type(2) & {
+    transform: rotate(-6deg);
+  }
+
+  li:nth-of-type(3) & {
+    transform: rotate(9deg);
+  }
 }
 
 .ilu {
   @include clearfix;
   font-family: $heading-font-family;
   font-size: 38px;
-  padding: $x-large-spacing;
+  padding: 15vh $x-large-spacing;
   background-image: url(/assets/images/ilu.svg);
   background-size: cover;
   background-position: center center;
@@ -227,11 +298,15 @@
 
 .weirdos {
   background-color: $dark-purple;
+  padding: $base-spacing $large-spacing $large-spacing;
   position: relative;
   overflow: hidden;
   color: #fff;
-  padding: $base-spacing $xxx-large-spacing $x-large-spacing;
   -webkit-font-smoothing: antialiased;
+
+  @media (min-width: 1050px) {
+    padding: $base-spacing $xxx-large-spacing $x-large-spacing;
+  }
 
   &:after {
     background-color: $pink;
@@ -252,7 +327,7 @@
     content: "";
     display: block;
     position: absolute;
-    left: 10%;
+    left: 0%;
     top: 48%;
     transform: skewY(3deg);
     width: 100%;
@@ -266,11 +341,11 @@
 
   h1 {
     color: $teal;
-    font-size: 148px;
+    font-size: 16vh;
     float: left;
-    max-width: 600px;
+    max-width: 700px;
     line-height: 1;
-    margin-bottom: 12rem;
+    margin-bottom: 20rem;
     position: relative;
 
     &:after {
@@ -290,10 +365,24 @@
   }
 
   .cfp__content {
-    @include position(absolute, 12rem null null 30rem);
+    @media (min-width: 880px) {
+      @include position(absolute, 12rem null null 25rem);
+    }
+
+    @media (min-width: 950px) {
+      left: 30rem;
+    }
+    @media (min-width: 1400px) {
+      left: 35rem;
+      top: 14rem;
+    }
 
     p {
       max-width: 550px;
+    }
+
+    a {
+      color: #fff;
     }
   }
 }
@@ -301,28 +390,40 @@
 .sponsor {
   position: relative;
   padding-top: $x-large-spacing;
-  max-width: 700px;
   z-index: 1;
   clear: both;
-  margin-left: 40%;
+
+  @media (min-width: 890px) {
+    margin-left: 27%;
+  }
 
   h2 {
-    font-size: 64px;
     margin-bottom: $large-spacing;
+    font-size: 42px;
+
+    @media screen and (min-width: 500px) {
+      font-size: 64px;
+    }
   }
 
   p {
-    float: left;
-    width: 50%;
-    margin-left: -10%;
-    margin-right: 10%;
+    margin-bottom: $large-spacing;
+
+    @media (min-width: 1000px) {
+      float: left;
+      width: 45%;
+      margin-right: 10%;
+    }
   }
 
   .button {
     display: block;
-    width: 50%;
-    float: left;
     background-color: $pink;
+
+    @media (min-width: 1000px) {
+      width: 45%;
+      float: left;
+    }
   }
 }
 
@@ -358,8 +459,8 @@
     margin-top: 75%;
   }
 
-  @media screen and (min-width: 950px) {
-    padding: $xxx-large-spacing $large-spacing $x-large-spacing;
+  @media (min-width: 950px) {
+    padding: 22vh $large-spacing;
     margin-left: 50%;
   }
 
@@ -428,8 +529,12 @@ footer {
   background: $purple;
   overflow: hidden;
   text-align: center;
-  padding: $xx-large-spacing $x-large-spacing;
+  padding: $x-large-spacing $base-spacing;
   -webkit-font-smoothing: antialiased;
+
+  @media (min-width: 750px) {
+    padding: $xx-large-spacing $x-large-spacing;
+  }
 
   a {
     color: #fff;
