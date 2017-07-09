@@ -1,0 +1,18 @@
+.conduct {
+  &:before {
+    display: none;
+  }
+
+  .headline {
+    margin-bottom: $x-large-spacing;
+  }
+
+  .date {
+    color: $purple;
+  }
+}
+
+.conduct__content {
+  max-width: 600px;
+  font-size: 18px;
+}
