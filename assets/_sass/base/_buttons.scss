@@ -11,7 +11,7 @@
   font-size: 32px;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
-  padding: $base-spacing $large-spacing;
+  padding: $base-spacing;
   text-align: center;
   text-decoration: none;
   transition: background-color $base-duration $base-timing;
@@ -21,6 +21,7 @@
 
   @media screen and (min-width: 700px) {
     font-size: 52px;
+    padding: $base-spacing $large-spacing;
   }
 
   &:hover {

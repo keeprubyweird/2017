@@ -176,6 +176,24 @@
   }
 }
 
+.emailemailemail {
+  margin-top: $x-large-spacing;
+
+  input {
+    border: 0;
+    font-family: $heading-font-family;
+    font-size: 32px;
+    border-radius: 15px;
+    color: $dark-purple;
+    padding: $base-spacing;
+
+    @media screen and (min-width: 700px) {
+      font-size: 52px;
+      padding: $base-spacing $large-spacing;
+    }
+  }
+}
+
 .headline {
   line-height: 1;
   color: $dark-gray;
@@ -277,10 +295,24 @@ img {
   background-image: url(/assets/images/ilu.svg);
   background-size: cover;
   background-position: center center;
+  position: relative;
 
   @media screen and (min-width: 820px) {
     font-size: 48px;
   }
+
+    &:before {
+      position: absolute;
+      content: "";
+      display: block;
+      background-image: url(/assets/images/asterisk-2.svg);
+      bottom: -6rem;
+      right: 1rem;
+      @include size(113px, 148px);
+      background-size: contain;
+      background-repeat: no-repeat;
+      z-index: 11;
+    }
 
   .ilu__container {
     margin: 0 auto;
@@ -300,8 +332,8 @@ img {
   background-color: $dark-purple;
   padding: $base-spacing $large-spacing $large-spacing;
   position: relative;
-  overflow: hidden;
   color: #fff;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
 
   @media (min-width: 1050px) {
@@ -341,22 +373,32 @@ img {
 
   h1 {
     color: $teal;
-    font-size: 16vh;
     float: left;
     max-width: 700px;
     line-height: 1;
-    margin-bottom: 20rem;
     position: relative;
+    font-size: 64px;
+    margin-bottom: 6.5rem;
+
+    @media (min-width: 500px) {
+      font-size: 16vh;
+      margin-bottom: 20rem;
+    }
 
     &:after {
       position: absolute;
       content: "";
       display: block;
       background-image: url(/assets/images/weirdos-underline.svg);
-      @include size(336px, 195px);
+      @include size(236px, 125px);
       background-size: contain;
       background-repeat: no-repeat;
+
+      @media (min-width: 500px) {
+        @include size(336px, 195px);
+      }
     }
+
   }
 
   .button {
@@ -403,6 +445,18 @@ img {
 
     @media screen and (min-width: 500px) {
       font-size: 64px;
+    }
+
+    &:before {
+      display: block;
+      position: absolute;
+      top: 9rem;
+      left: -16rem;
+      @include size(210px, 196px);
+      content: "";
+      background-image: url(/assets/images/support-stars.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   }
 
