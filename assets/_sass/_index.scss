@@ -8,6 +8,9 @@
   padding: $x-large-spacing $large-spacing;
   overflow: hidden;
   position: relative;
+  @media (max-height: 775px) {
+  min-height: 98vh;
+  }
 
   @media (min-width: 450px) {
     padding: $xxx-large-spacing $x-large-spacing $xx-large-spacing $xxx-large-spacing;
@@ -102,6 +105,10 @@
 .address {
   color: #fff;
   margin-bottom: $large-spacing;
+
+  a {
+    text-decoration: none;
+  }
 
   @media (min-width: 725px) {
     color: $purple;
@@ -199,6 +206,17 @@
       font-size: 52px;
       padding: $base-spacing $large-spacing;
     }
+  }
+
+  .response {
+    padding-bottom: $base-spacing;
+  }
+
+  #mc_embed_signup div.mce_inline_error {
+    border-radius: 6px;
+    background-color: $red;
+    color: #fff;
+    padding: $small-spacing;
   }
 }
 
@@ -345,7 +363,7 @@
 
     .author {
       position: relative;
-      
+
       @media (min-width: 1200px) {
         display: flex;
       }
