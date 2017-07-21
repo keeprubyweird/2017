@@ -24,12 +24,6 @@
     padding: $base-spacing $large-spacing;
   }
 
-  &.mailing-list {
-    @media screen and (min-width: 700px) {
-      margin-top: $base-spacing
-    }
-  }
-
   &:hover {
     background-color: $red;
     background: linear-gradient(to right, #b657fd 0%,#ea56fd 10%,#fa59fd 20%,#fd5959 34%,#fd9a59 49%,#fdca59 64%,#60fcdc 83%,#1565c0 99%);
