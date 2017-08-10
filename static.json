@@ -1,5 +1,11 @@
 {
   "root": "_site/",
   "clean_urls": true,
-  "https_only": true
+  "https_only": true,
+  "redirects": {
+    "/code-of-conduct": {
+      "url": "/conduct",
+      "status": 301
+    }
+  }
 }
