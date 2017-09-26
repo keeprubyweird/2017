@@ -112,11 +112,45 @@ title: Keep Ruby Weird 2017 will be the best conference of your life.
 
 <section class="weirdos">
   <div class="cfp hero__container">
-    <h1>Calling all weirdos</h1>
+    <h1>Meet the weirdos</h1>
     <div class="cfp__content">
       <a href="https://www.papercall.io/krw-2017" class="button">Speak at KRW!</a>
       <p>We’re as always looking for a mix of soft (conceptual, community, career, other C-words), technical (discussing code on screen), and non-Ruby (space, emoji, art). Also you should read <a href="/conduct">Our Code of Conduct.</a></p>
     </div>
+    <ul class="speakers">
+      {% for speaker in site.data.speakers limit: 3%}
+      <li>
+        <blockquote>
+          <details> <summary><strong>{{ speaker.talk }}</strong></summary>
+            <p>{{ speaker.abstract }}</p>
+          </details>
+        </blockquote>
+        <div class="author">
+          <a href="https://twitter.com/{{ speaker.twitter }}">
+            <img src="https://twitter.com/{{ speaker.twitter }}/profile_image?size=original" alt="{{ speaker.name }}">
+          </a>
+          <p class="commentary">{{ speaker.name }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <ul class="speakers">
+      {% for speaker in site.data.speakers limit: 3 offset: 3%}
+      <li>
+        <blockquote>
+          <details> <summary><strong>{{ speaker.talk }}</strong></summary>
+            <p>{{ speaker.abstract }}</p>
+          </details>
+        </blockquote>
+        <div class="author">
+          <a href="https://twitter.com/{{ speaker.twitter }}">
+            <img src="https://twitter.com/{{ speaker.twitter }}/profile_image?size=original" alt="{{ speaker.name }}">
+          </a>
+          <p class="commentary">{{ speaker.name }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
   <div class="sponsor">
     <h2>PLEASE support our weirdness with the gererosity of Your Friendship</h2>

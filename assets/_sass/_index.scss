@@ -371,6 +371,29 @@
   }
 }
 
+.speakers {
+  @extend .tweets;
+  overflow: inherit;
+  float: left;
+
+  .author img {
+    max-height: 200px;
+    border-radius: 50%;
+  }
+
+  li {
+    color: $dark-gray;
+    background-color: $mint;
+
+    &:nth-of-type(1)::before {
+      background-color: $flesh;
+    }
+    &:nth-of-type(3)::before {
+      background-color: $hot-pink;
+    }
+  }
+}
+
 .commentary {
   word-wrap: break-word;
   font-family: $heading-font-family;
@@ -435,15 +458,10 @@
 
 .weirdos {
   background-color: $dark-purple;
-  padding: $base-spacing $large-spacing $large-spacing;
   position: relative;
   color: #fff;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
-
-  @media (min-width: 1050px) {
-    padding: $base-spacing $xxx-large-spacing $x-large-spacing;
-  }
 
   &:after {
     background-color: $pink;
@@ -483,11 +501,16 @@
     line-height: 1;
     position: relative;
     font-size: 64px;
+    margin-left: $large-spacing;
     margin-bottom: 6.5rem;
 
     @media (min-width: 500px) {
       font-size: 15vh;
       margin-bottom: 20rem;
+    }
+
+    @media (min-width: 1050px) {
+      margin-left: $xxx-large-spacing;
     }
 
     &:after {
@@ -520,8 +543,8 @@
       left: 30rem;
     }
     @media (min-width: 1400px) {
-      left: 35rem;
-      top: 14rem;
+      left: 55rem;
+      top: 8rem;
     }
 
     p {
