@@ -372,25 +372,46 @@
 }
 
 .speakers {
-  @extend .tweets;
-  overflow: inherit;
-  float: left;
+  display: grid;
+  flex: 1;
+  grid-gap: $large-spacing;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 
-  .author img {
-    max-height: 200px;
-    border-radius: 50%;
+  blockquote {
+    margin: 0;
+  }
+}
+
+.speaker {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  .author {
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-family: $heading-font-family;
+    font-size: 48px;
+    line-height: 0.9;
+    position: relative;
+    text-align: center;
   }
 
-  li {
-    color: $dark-gray;
-    background-color: $mint;
+  a {
+    display: inline-block;
+    flex-shrink: 0;
+  }
 
-    &:nth-of-type(1)::before {
-      background-color: $flesh;
-    }
-    &:nth-of-type(3)::before {
-      background-color: $hot-pink;
-    }
+  img {
+    @include size(200px);
+    border-radius: 50%;
+    display: block;
+    mix-blend-mode: screen;
+  }
+
+  a:hover img {
+    mix-blend-mode: inherit;
+    transform: rotate(30deg);
   }
 }
 
@@ -457,36 +478,53 @@
 }
 
 .weirdos {
-  background-color: $dark-purple;
+  padding: $x-large-spacing $large-spacing;
+  background-color: $purple;
   position: relative;
-  color: #fff;
   overflow: hidden;
-  -webkit-font-smoothing: antialiased;
 
-  &:after {
-    background-color: $pink;
+  @media screen and (min-width: 950px) {
+    display: flex;
+    padding: $xxx-large-spacing $x-large-spacing;
+  }
+
+  &::before {
+    background-color: $dark-purple;
     bottom: -140px;
     content: "";
     display: block;
     position: absolute;
-    left: -70%;
+    right: 40%;
     top: 0;
-    transform: skewX(-32deg);
+    transform: skewX(-24deg);
     width: 100%;
     z-index: 0;
   }
+}
 
-  &:before {
-    background-color: $dark-gray;
-    bottom: -10rem;
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0%;
-    top: 48%;
-    transform: skewY(3deg);
-    width: 100%;
-    z-index: 0;
+.weirdos__content {
+  float: left;
+  z-index: 1;
+
+  @media screen and (max-width: 949px) {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 64px;
+    color: $mustard;
+  }
+
+  p {
+    max-width: 450px;
+
+    @media screen and (max-width: 949px) {
+      margin: 0 auto;
+    }
+  }
+
+  a {
+    margin-bottom: $base-spacing;
   }
 }
 
