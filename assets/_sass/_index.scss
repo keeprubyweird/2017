@@ -9,11 +9,12 @@
   overflow: hidden;
   position: relative;
   @media (max-height: 775px) {
-  min-height: 98vh;
+    min-height: 98vh;
   }
 
   @media (min-width: 450px) {
-    padding: $xxx-large-spacing $x-large-spacing $xx-large-spacing $xxx-large-spacing;
+    padding: $xxx-large-spacing $x-large-spacing $xx-large-spacing
+      $xxx-large-spacing;
   }
 
   &:before {
@@ -97,7 +98,7 @@
     display: block;
     position: absolute;
     background-image: url(/assets/images/date-underline.svg);
-    top:22px;
+    top: 22px;
     left: 1rem;
   }
 }
@@ -372,22 +373,28 @@
 }
 
 .speakers {
-  display: grid;
-  flex: 1;
-  grid-gap: $large-spacing;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
 
-  blockquote {
-    margin: 0;
+  @media screen and (min-width: 740px) {
+    display: grid;
+    flex: 1;
+    grid-gap: $large-spacing;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
   }
 }
 
 .speaker {
-  text-align: center;
   position: relative;
   z-index: 1;
 
+  a {
+    text-align: center;
+  }
+
   .author {
+    text-align: center;
     -webkit-font-smoothing: antialiased;
     color: #fff;
     font-family: $heading-font-family;
@@ -395,6 +402,15 @@
     line-height: 0.9;
     position: relative;
     text-align: center;
+    margin-top: -3rem;
+  }
+
+  h4 {
+    color: $dark-gray;
+    line-height: 1;
+    font-size: 28px;
+    font-family: $seconday-heading-font-family;
+    text-transform: uppercase;
   }
 
   a {
@@ -403,10 +419,14 @@
   }
 
   img {
-    @include size(200px);
+    @include size(360px);
     border-radius: 50%;
     display: block;
     mix-blend-mode: screen;
+  }
+
+  &:nth-child(2n + 1) img {
+    @include size(290px);
   }
 
   a:hover img {
@@ -450,18 +470,18 @@
     font-size: 48px;
   }
 
-    &:before {
-      position: absolute;
-      content: "";
-      display: block;
-      background-image: url(/assets/images/asterisk-2.svg);
-      bottom: -6rem;
-      right: 1rem;
-      @include size(113px, 148px);
-      background-size: contain;
-      background-repeat: no-repeat;
-      z-index: 11;
-    }
+  &:before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url(/assets/images/asterisk-2.svg);
+    bottom: -6rem;
+    right: 1rem;
+    @include size(113px, 148px);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 11;
+  }
 
   .ilu__container {
     margin: 0 auto;
@@ -480,15 +500,51 @@
 .weirdos {
   padding: $x-large-spacing $large-spacing;
   background-color: $purple;
-  position: relative;
   overflow: hidden;
+  flex-direction: column;
+  position: relative;
 
-  @media screen and (min-width: 950px) {
-    display: flex;
-    padding: $xxx-large-spacing $x-large-spacing;
+  .weirdos__container {
+    max-width: 1600px;
+    margin: 0 auto;
   }
 
-  &::before {
+  h2 {
+    position: relative;
+    display: block;
+    color: $teal;
+    z-index: 5;
+    line-height: 0.9;
+    font-size: 64px;
+
+    @media (min-width: 500px) {
+      font-size: 18vh;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      background-image: url(/assets/images/weirdos-underline-1.svg);
+      background-size: contain;
+      @include size(336px, 195px);
+      background-repeat: no-repeat;
+      margin-top: -2rem;
+      z-index: 0;
+
+      @media (min-width: 500px) {
+        @include size(668px, 80px);
+      }
+    }
+  }
+
+  .center-button {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+  }
+
+  &::after {
     background-color: $dark-purple;
     bottom: -140px;
     content: "";
@@ -499,32 +555,6 @@
     transform: skewX(-24deg);
     width: 100%;
     z-index: 0;
-  }
-}
-
-.weirdos__content {
-  float: left;
-  z-index: 1;
-
-  @media screen and (max-width: 949px) {
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 64px;
-    color: $mustard;
-  }
-
-  p {
-    max-width: 450px;
-
-    @media screen and (max-width: 949px) {
-      margin: 0 auto;
-    }
-  }
-
-  a {
-    margin-bottom: $base-spacing;
   }
 }
 
@@ -564,7 +594,6 @@
         @include size(336px, 195px);
       }
     }
-
   }
 
   .button {

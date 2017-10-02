@@ -110,27 +110,26 @@ title: Keep Ruby Weird 2017 will be the best conference of your life.
   </div>
 </section>
 
-<section class="weirdos hero__container">
-  <ul class="speakers">
-    <li class="weirdos__content">
-      <h2>Meet the weirdos</h2>
-      <a href="https://www.papercall.io/krw-2017" class="button">Speak at KRW!</a>
-      <p>We’re as always looking for a mix of soft (conceptual, community, career, other C-words), technical (discussing code on screen), and non-Ruby (space, emoji, art). Also you should read <a href="/conduct">Our Code of Conduct.</a></p>
-    </li>
-    {% for speaker in site.data.speakers limit: 8%}
-      <li class="speaker">
-        <a href="https://twitter.com/{{ speaker.twitter }}">
-          <img src="https://twitter.com/{{ speaker.twitter }}/profile_image?size=original" alt="{{ speaker.name }}">
-        </a>
-        <p class="author">{{ speaker.name }}</p>
-        <blockquote>
-          <details> <summary><strong>{{ speaker.talk }}</strong></summary>
-            <p>{{ speaker.abstract }}</p>
-          </details>
-        </blockquote>
-      </li>
-    {% endfor %}
-  </ul>
+<section class="weirdos">
+  <div class="weirdos__container">
+    <h2>Meet the weirdos</h2>
+
+    <ul class="speakers">
+      {% for speaker in site.data.speakers limit: 8%}
+        <li class="speaker">
+          <a href="https://twitter.com/{{ speaker.twitter }}">
+            <img src="https://twitter.com/{{ speaker.twitter }}/profile_image?size=original" alt="{{ speaker.name }}">
+          </a>
+          <h3 class="author">{{ speaker.name }}</p>
+          <h4>{{ speaker.talk }}</h3>
+          <p>{{ speaker.abstract }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="center-button">
+      <a href="/conduct" class="button">Read Our Code of Conduct.</a>
+    </div>
+  </div>
 </section>
 
 <section class="alamo">
