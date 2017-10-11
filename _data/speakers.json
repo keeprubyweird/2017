@@ -1,0 +1,38 @@
+[
+  {
+    "name": "David Bock",
+    "twitter": "bokmann",
+    "talk": "Ruby Investigation of Orthogonal Latin Squares of Order Ten",
+    "abstract": "While teaching high school, I became fascinated with the ideas around Orthogonal Latin Squares, and a program written in 1963 for a 'UNIVAC 2106 Military Computer' that found them for order 10, proving a ~250 year old conjecture by Euler wrong. I found the paper, and rewrote it in Ruby. Lets play."
+  },
+  {
+    "name": "Rolen Le",
+    "twitter": "rolentle",
+    "talk": "Dungeons & Collaboration: A Player’s Handbook on How To Work With a Distributed Team",
+    "abstract": "What can playing tabletop role playing games such as Dungeons and Dragon teach us about collaborating online? From general online etiquette to building meaning full relationships, I will discuss tips and tricks of roleplaying that have made me a better coworker.\n\n"
+  },
+  {
+    "name": "Ben Scofield",
+    "twitter": "bscofield",
+    "talk": "Learning to see",
+    "abstract": "The hardest part of learning to draw is figuring out that you have to draw what you actually see, not what you think you see. Draw a \"face\" and you end up with an emoji; draw shadows and shapes instead and you end up with a portrait. This talk takes that lesson and applies it to... well, everything."
+  },
+  {
+    "name": "Cecy Correa",
+    "twitter": "cecycorrea",
+    "talk": "The Psychology of Fake News (and What Tech Can Do About It)",
+    "abstract": "Fake news is not a tech problem, it's a human problem. To build the tools necessary to combat fake news, technologists must think differently. We must understand the psychology behind fake news to arrive at a solution that is human-centric and attainable."
+  },
+  {
+    "name": "Bradley Grzesiak",
+    "twitter": "listrophy",
+    "talk": "kerbal_space_program.rb",
+    "abstract": "So there's this game, Kerbal Space Program. You basically create your own space program from scratch. Well, you can control it via TCP, and—using Ruby—we're gonna launch, orbit, and crash our brave Kerbins. You might even learn a thing or two about orbital mechanics and control theory along the way."
+  },
+  {
+    "name": "Chris Arcand",
+    "twitter": "chrisarcand",
+    "talk": "An Atypical 'Performance' Talk",
+    "abstract": "A mixture of a talk on programming and a live classical music recital. Listen to a former-orchestral-clarinetist-turned-developer talk about parallelisms between music performance and programming - such as complexity, imposter syndrome, and true concentration - with live performances throughout!"
+  }
+]

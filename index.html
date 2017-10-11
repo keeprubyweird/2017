@@ -111,17 +111,42 @@ title: Keep Ruby Weird 2017 will be the best conference of your life.
 </section>
 
 <section class="weirdos">
-  <div class="cfp hero__container">
-    <h1>Calling all weirdos</h1>
-    <div class="cfp__content">
-      <a href="https://www.papercall.io/krw-2017" class="button">Speak at KRW!</a>
-      <p>We’re as always looking for a mix of soft (conceptual, community, career, other C-words), technical (discussing code on screen), and non-Ruby (space, emoji, art). Also you should read <a href="/conduct">Our Code of Conduct.</a></p>
+  <div class="weirdos__container">
+    <h2>Meet the weirdos</h2>
+
+    <ul class="speakers">
+      <li class="speaker keynote">
+        <a href="https://twitter.com/wycats">
+          <img alt="Yehuda with Dave's face" src="/assets/images/yehuda.png" />
+        </a>
+        <h3 class="author">Yehuda Katz</h3>
+        <a href="https://twitter.com/littlecalculist">
+          <img alt="Dave with Yehuda's face" src="/assets/images/dave.png" />
+        </a>
+        <h3 class="author">Dave Herman</h3>
+        <h4>Keynote</h4>
+      </li>
+      <li class="speaker keynote">
+        <a href="https://twitter.com/aemeredith">
+          <img src="/assets/images/elle.jpg" alt="Elle Meredith" />
+        </a>
+        <h3 class="author">Elle Meredith</h3>
+        <h4>Keynote</h4>
+      </li>
+      {% for speaker in site.data.speakers limit: 8%}
+        <li class="speaker">
+          <a href="https://twitter.com/{{ speaker.twitter }}">
+            <img src="https://twitter.com/{{ speaker.twitter }}/profile_image?size=original" alt="{{ speaker.name }}">
+          </a>
+          <h3 class="author">{{ speaker.name }}</p>
+          <h4>{{ speaker.talk }}</h3>
+          <p>{{ speaker.abstract }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="center-button">
+      <a href="/conduct" class="button">Read Our Code of Conduct.</a>
     </div>
-  </div>
-  <div class="sponsor">
-    <h2>PLEASE support our weirdness with the gererosity of Your Friendship</h2>
-    <p>Keep Ruby Weird can't happen without help from sponsors. We have a few different sponsorship levels, and of course we're open to other arrangements.</p>
-    <a href="mailto:organizers@keeprubyweird.com" class="button">Sponsor Us</a>
   </div>
 </section>
 
