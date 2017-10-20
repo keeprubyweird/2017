@@ -554,16 +554,78 @@
   }
 }
 
-.sponsors, .weirdos {
+.schedule {
+  background-color: $orange;
+
+  h2 {
+    margin-bottom: $large-spacing;
+    color: $mint;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+
+  h4 {
+    font-size: 34px;
+    color: $hot-pink;
+    letter-spacing: 3px;
+  }
+
+  &__subtitle {
+    color: $dark-purple;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-gap: $large-spacing;
+    margin-bottom: $base-spacing;
+
+    &-time {
+      text-align: right;
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__item {
+      grid-template-columns: 10% 1fr;
+    }
+
+    h3 {
+      font-size: 38px;
+    }
+
+    h4 {
+      font-size: 24px;
+    }
+  }
+}
+
+.weirdos .weirdos__container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.weirdos, .sponsors {
+  &::after {
+    bottom: -140px;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 40%;
+    top: 0;
+    transform: skewX(-24deg);
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+.schedule, .sponsors, .weirdos {
   padding: 15vh $x-large-spacing;
   overflow: hidden;
   flex-direction: column;
   position: relative;
-
-  .weirdos__container {
-    max-width: 1600px;
-    margin: 0 auto;
-  }
 
   h2 {
     position: relative;
@@ -602,18 +664,6 @@
     position: relative;
     z-index: 5;
     text-align: center;
-  }
-
-  &::after {
-    bottom: -140px;
-    content: "";
-    display: block;
-    position: absolute;
-    right: 40%;
-    top: 0;
-    transform: skewX(-24deg);
-    width: 100%;
-    z-index: 0;
   }
 
   @media (max-width: 500px) {
