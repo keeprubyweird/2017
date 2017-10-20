@@ -536,7 +536,7 @@
 
 .sponsors__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
   margin-top: 15vh;
 
@@ -550,6 +550,7 @@
 
   &-item {
     z-index: 1;
+    align-self: center;
   }
 }
 
