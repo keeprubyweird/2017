@@ -115,24 +115,35 @@ title: Keep Ruby Weird 2017 will be the best conference of your life.
     <h2>Meet the weirdos</h2>
 
     <ul class="speakers">
+
       <li class="speaker keynote">
         <a href="https://twitter.com/wycats">
           <img alt="Yehuda with Dave's face" src="/assets/images/yehuda.png" />
         </a>
         <h3 class="author">Yehuda Katz</h3>
+        <h4>Keynote</h4>
+        <p>Yehuda Katz is one of the creators of Ember.js, a member of the Rust Core Team, and a retired Ruby on Rails and jQuery Core Team member. During the day he's CTO at Tilde, where he works on Skylight, the smart profiler for Rails, and does Ember.js consulting. He's best known for his open source work, which also includes having created projects like Thor, Handlebars and Bundler. He travels the world doing open source evangelism and web standards work, and has written several successful technology books.</p>
+      </li>
+
+      <li class="speaker keynote">
+        <a href="https://twitter.com/wycats">
         <a href="https://twitter.com/littlecalculist">
           <img alt="Dave with Yehuda's face" src="/assets/images/dave.png" />
         </a>
         <h3 class="author">Dave Herman</h3>
         <h4>Keynote</h4>
+        <p>Dave Herman has served on TC39, the standards committee responsible for evolving JavaScript, since 2006, and founded Mozilla Research in 2011. At Mozilla, Dave advised and contributed to the development of Rust, the parallel browser engine Servo, asm.js, and WebAssembly. Dave has recently joined LinkedIn's build tools team, where he is looking at finding new ways to help developers dare to be ambitious.</p>
       </li>
+
       <li class="speaker keynote">
         <a href="https://twitter.com/aemeredith">
           <img src="/assets/images/elle.jpg" alt="Elle Meredith" />
         </a>
         <h3 class="author">Elle Meredith</h3>
         <h4>Keynote</h4>
+        <p>Elle works as a consultant for Blackmill. Before Blackmill, she was a Development Director in the New York City office of thoughtbot. She believes in writing clean code, driven by automatic tests, with agile practices, an even work/life balance, and a respectful and inclusive team culture. She constantly works to improve her understanding of technologies, techniques, anti-patterns, and what is considered best practice. Her aim is to deliver clean, functional and user–friendly websites in an appropriate timeframe without wasting money or energy. Elle appreciates the value of strong communities. When she is not immersed in the Ruby community, she is probably immersed in water, or lately, in bread flour.</p>
       </li>
+
       {% for speaker in site.data.speakers limit: 8%}
         <li class="speaker">
           <a href="https://twitter.com/{{ speaker.twitter }}">
@@ -144,8 +155,39 @@ title: Keep Ruby Weird 2017 will be the best conference of your life.
         </li>
       {% endfor %}
     </ul>
-    <div class="center-button">
-      <a href="/conduct" class="button">Read Our Code of Conduct.</a>
+  </div>
+  <div class="center-button">
+    <a href="/conduct" class="button">Code of Conduct</a>
+  </div>
+</section>
+<section class="sponsors">
+    <h2>Meet the sponsors</h2>
+
+    <ul class="sponsors__list">
+      <li class="sponsors__list-item">
+        <a href="https://www.bigcommerce.com/careers/">
+          <img alt="BigCommerce logo" src="https://s3.amazonaws.com/www1.bigcommerce.com/assets/mediakit/downloads/BigCommerce-logo-dark.png">
+        </a>
+      </li>
+
+      <li class="sponsors__list-item">
+        <a href="https://story.manifold.co/">
+          <img alt="Manifold logo" src="/assets/images/manifold.png">
+        </a>
+      </li>
+
+      <li class="sponsors__list-item">
+        <a href="https://omc.io/">
+          <img alt="One More Cloud logo" src="/assets/images/one-more-cloud.png">
+        </a>
+      </li>
+    </ul>
+
+    <div class="sponsor">
+      <h3 class="headline">PLEASE support our weirdness with the gererosity of Your
+        Friendship</h3>
+      <p>Keep Ruby Weird can't happen without help from sponsors. We have a few different sponsorship levels, and of course we're open to other arrangements.</p>
+      <a href="mailto:organizers@keeprubyweird.com" class="button">Sponsor Us</a>
     </div>
   </div>
 </section>
