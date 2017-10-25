@@ -24,7 +24,7 @@
     "abstract": "Fake news is not a tech problem, it's a human problem. To build the tools necessary to combat fake news, technologists must think differently. We must understand the psychology behind fake news to arrive at a solution that is human-centric and attainable."
   },
   {
-    "name": "Bradley Grzesiak",
+    "name": "Brad Grzesiak",
     "twitter": "listrophy",
     "talk": "kerbal_space_program.rb",
     "abstract": "So there's this game, Kerbal Space Program. You basically create your own space program from scratch. Well, you can control it via TCP, and—using Ruby—we're gonna launch, orbit, and crash our brave Kerbins. You might even learn a thing or two about orbital mechanics and control theory along the way."
