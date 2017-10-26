@@ -1,11 +1,5 @@
 [
   {
-    "name": "David Bock",
-    "twitter": "bokmann",
-    "talk": "Ruby Investigation of Orthogonal Latin Squares of Order Ten",
-    "abstract": "While teaching high school, I became fascinated with the ideas around Orthogonal Latin Squares, and a program written in 1963 for a 'UNIVAC 2106 Military Computer' that found them for order 10, proving a ~250 year old conjecture by Euler wrong. I found the paper, and rewrote it in Ruby. Lets play."
-  },
-  {
     "name": "Rolen Le",
     "twitter": "rolentle",
     "talk": "Dungeons & Collaboration: A Player’s Handbook on How To Work With a Distributed Team",
